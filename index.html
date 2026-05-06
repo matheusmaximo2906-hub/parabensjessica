@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário, Mãe da Pudim!!!!!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 30px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #ff4e7a;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ffe3ec;
+    }
+
+    .surpresa {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5em;
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);} 
+      to {opacity: 1; transform: translateY(0);} 
+    }
+
+    /* Confetes */
+    .confete {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: white;
+      animation: cair linear infinite;
+    }
+
+    @keyframes cair {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+
+    /* Bolos */
+    .bolo {
+      position: fixed;
+      top: -50px;
+      font-size: 30px;
+      animation: cair linear infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/happy-birthday-to-you.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>Feito pelo Goaba! 🎉</h1>
+
+  <div class="container">
+    <div class="card">
+      <p>
+        Hoje é um dia extremamente especial, um daqueles momentos únicos que merecem ser celebrados com todo carinho, alegria e admiração possíveis. Jéssica, que este dia seja apenas o começo de um novo ciclo repleto de felicidade, saúde, conquistas e momentos inesquecíveis ao lado das pessoas que te amam.
+      </p>
+
+      <p>
+        A vida é feita de pequenos instantes, e cada sorriso seu faz com que tudo ao redor fique mais leve e bonito. Sua presença é algo que realmente faz diferença, e é impossível não reconhecer o quanto você é uma pessoa especial, cheia de qualidades e com um coração enorme.
+      </p>
+
+      <p>
+        Que você continue sendo essa pessoa incrível, iluminada, forte e cheia de sonhos. Que cada objetivo seu se realize, que cada plano dê certo e que nunca falte motivo para sorrir. Você merece tudo de melhor que a vida pode oferecer, sem exceções.
+      </p>
+
+      <p>
+        Neste aniversário, desejo que você receba não só presentes, mas também muito amor, carinho, reconhecimento e momentos que vão ficar guardados para sempre na memória. Que o seu caminho seja sempre guiado por coisas boas e por pessoas que realmente valorizam quem você é.
+      </p>
+
+      <p>
+        Aproveite cada segundo desse dia, celebre do seu jeito e saiba que hoje o mundo está um pouco mais feliz simplesmente por ser o seu dia. Feliz aniversário, Jéssica! 🎂✨
+      </p>
+
+      <button onclick="mostrarSurpresa()">Clique para uma surpresa 🎁</button>
+
+      <div class="surpresa" id="surpresa">
+        💖 Você é uma pessoa incrível e merece um universo inteiro de felicidade! 💖
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSurpresa() {
+      document.getElementById('surpresa').style.display = 'block';
+    }
+
+    function criarConfete() {
+      const c = document.createElement('div');
+      c.classList.add('confete');
+      c.style.left = Math.random() * window.innerWidth + 'px';
+      c.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 5000);
+    }
+
+    function criarBolo() {
+      const b = document.createElement('div');
+      b.classList.add('bolo');
+      b.innerText = '🎂';
+      b.style.left = Math.random() * window.innerWidth + 'px';
+      b.style.animationDuration = (Math.random() * 4 + 3) + 's';
+      document.body.appendChild(b);
+      setTimeout(() => b.remove(), 7000);
+    }
+
+    setInterval(criarConfete, 150);
+    setInterval(criarBolo, 800);
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
